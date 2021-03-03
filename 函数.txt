@@ -1,0 +1,89 @@
+find(子串,开始位置下标,结束位置下标) 检测某个子串是否包含在这个字符串中，如果在返回下标不在返回-1
+
+index和find一样，但是找不到会报错
+
+rfind和rindex是从右向左找
+
+count是返回出现次数
+
+replace(旧子串,新子串,替换次数)
+替换:不写替换次数则全部替换,返回新子串,不修改原子串
+
+split(分割字符,分割字符出现的次数)
+分割:返回一个列表，丢失分割字符
+
+连接符.join(合并的列表)合并字符串
+
+capitalize第一个字符转大写
+title每个单词首字母转换成大写
+lower大写转小写
+upper小写转大写
+
+strip删除字符串两侧空白字符
+
+ljust 左对齐
+rjust 右对齐
+center 居中对齐
+
+isalpha如果字符串至少有一个字符并且所有字符都是字母返回true，否则false
+isdigit如果字符串只包含数字返回true，否则返回false
+isalnum至少有一个是字符，且是数字或者字母返回true，否则false
+isspace只包含空白,则返回true,否则false
+
+append列表增加到结尾  append追加数据的时候如果数据是一个序列，就会追加整个序列
+extend列表追加 追加如果是应该序列,会拆开依次追加
+insert(位置,数据) 指定位置追加 其他效果同 append
+
+del 可以指定一个数据也可以指定下标删除
+pop 指定下标或者删除最后一个数据，返回被删除的数据
+remove 删除名字
+clear 清空列表
+
+reverse 逆序
+sort(reverse=布尔) 排序
+
+copy 列表复制
+
+del删除 clear清空
+查找 key值查找,找不到会报错
+字典序列.get(key,默认值),如果找不到返回默认值,如果没写默认值返回None
+keys 查找字典里面所有的key 返回可迭代对象[可用for循环遍历]
+values查找字典里面所有值 返回可迭代对象
+items 查找字典里面所有的键值对 返回可迭代对象 元组
+
+len元素个数 del删除 max容器中元素最大值 min容器中元素最小值
+range(start,end,step)生成从start到end的数字,步长为step,供for循环使用
+enumerate(可编译对象,用于设置变量数据下标的初始值默认0)
+用于将可编译的数据对象组合为一个缩影序列，同上列出数据和数据下标,一般用于for循环使用
+
+*args不定长:他们会合并为一个元组
+**kwargs关键字传递:打包返回字典
+
+lambda 参数列表 : 表达式
+
+import functools
+abs() 绝对值 round() 四舍五入
+  map(函数名,列表序列) 将传入的函数变量作用到 列表序列中每一个元素中
+Python2将结果组成新的列表返回 Python3将返回迭代器
+[map就是让列表中每一个元素都运行一次函数]
+  reduce(函数名,列表序列) 每次函数执行后的结果继续和序列的下一个元素做累积计算
+要想使用result需要导入import functools
+[reduce就是让列表中每一个元素都运行一次函数,然后相加]
+  filter(函数名,列表系列)过滤掉不符合条件的元素,返回一个filter对象
+[reduce相当于if过滤]
+
+read(num) num表示要读文件中读取数据的长度[\n也算一个字节],不传则读取所以数据
+readlines() 一行一行读取，每行是一个数据
+readline()一次读取一行
+
+seek(偏移量,起始位置)移动文件指针 0开头 1当前 2结尾
+
+
+import os
+os.rename(目标文件,新名字) 重命名文件/文件夹
+os.remove(目标文件名) 删除文件/文件夹
+os.mkdir(文件夹名字)创建文件夹
+os.rmdir(文件夹名字)删除文件夹
+os.getcwd()获取当前目录
+os.chdir(目录)改变默认目录
+os.listdir(目录)获取目录列表
